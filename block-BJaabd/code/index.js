@@ -7,9 +7,20 @@ Write a program that asks the user his/her age and check for the following condi
 - `if` the age is between 12-55 then print the message "You can participate in the marathon".
 - `if` the age is between 4-11 then print the message " You are too young to participate in the marathon".
 - `if` the age is less than 4 then print the message " Hey Kiddo! Can You Walk ?"
-- `if` the age is greater than 55 then print the message " You are too old to participate in the marthon".
+- `if` the age is greater than 55 then print the message " You are too old to participate in the marathon".
 👇
 */
+let age = prompt('Enter Your Age');
+if (age => 12 && age <= 55) {
+  console.log("You can participate in the marathon")
+} else if (age => 4 && age <= 11) {
+  console.log(" You are too young to participate in the marathon")
+} else if (age < 4) {
+  console.log(" Hey Kiddo! Can You Walk ?")
+} else if (age < 55) {
+  console.log(" You are too old to participate in the marathon")
+}
+
 
 // Loops
 /*
@@ -21,13 +32,25 @@ n = 7 => output: heeeeeeello
 👇
 */
 // [Your code goes here]
+let e = "";
+let n = prompt('Enter Number');
+for (let i = 1; i <= n; i++) {
+  e += 'e';
+}
+alert(`H${e}llo`)
 
 /*
 Program to calculate the sum of first n natural numbers(1,2,3...n are known as natural numbers). Prompt user to enter n (using `prompt`) then based on input provided calculate and show result in `alert`.
 👇
 */
 // [Your code goes here]
-
+let NaturalNum = prompt('Enter a number');
+let i = 1;
+let sum = 0
+while (i <= NaturalNum) {
+  sum += i;
+  i++
+}
 /* Switch Statement
 
  🎖Using switch statement do the following
@@ -46,6 +69,36 @@ Take a number value from user and alert the message if it matches the conditions
 
 */
 // [Your code goes here]
+let Number1 = Number(prompt('Enter One Number'));
+switch (Number1) {
+  case 1:
+    alert('ONE');
+    break;
+  case 2:
+    alert('TWO');
+    break;
+  case 3:
+    alert('THREE');
+    break;
+  case 4:
+    alert('FOUR');
+    break;
+  case 5:
+    alert('FIVE');
+    break;
+  case 6:
+    alert('SIX');
+    break;
+  case 7:
+    alert('SEVEN');
+    break;
+  case 8:
+    alert('EIGHT');
+    break;
+  case 9:
+    alert('NINE');
+    break;
+}
 
 /*
 🎖Using switch statement do the following
@@ -62,12 +115,46 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 */
 
 // [Your code goes here]
+let marks  = Number(prompt('Enter You Mark'));
+
+switch(marks){
+  case marks > 90:
+    alert('AA');
+    break;
+  case marks => 70 && marks <= 80:
+    alert('BB');
+    break;
+  case marks => 60 && marks <= 70:
+  alert('CC');
+  break
+  case marks => 50 && marks <= 60:
+  alert('DD');
+  break;
+  case marks => 40 && marks <= 50:
+    alert('CD');
+    break;
+  case marks => 30 && marks <= 40:
+    alert('DD');
+    break;
+  case marks < 30:
+    alert('FF');
+   break;
+}
 
 /*
  🎖Write a JavaScript program that takes two `integers` from user (using prompt) and alerts the larger number.
 */
+
 // [your code goes here]
 
+let n1 = Number(prompt('Enter First Number'));
+let n2 = Number(prompt('Enter Second Number'))
+if(n1 > n2){
+  alert(n1);
+}else{
+  alert(n2)
+}
+ 
 /*
 🎖Write a JavaScript conditional statement to find the sign (+, -) of product of three numbers. Take those three numbers from user using `prompt`. Display an alert box with the specified sign.
 */
@@ -86,3 +173,30 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 */
 
 // [Your code goes here]
+let FirstNumber = prompt('Enter First Number');
+let SecondNumber = prompt('Enter Second Number');
+let opreation = prompt('what do you can to perform');
+if(opreation == '+'){
+  alert(FirstNumber + SecondNumber);
+}
+else if(opreation == '*'){
+  alert(FirstNumber*SecondNumber);
+}
+else if(opreation == '-'){
+  if(FirstNumber > SecondNumber){
+    alert(FirstNumber-SecondNumber);
+  }
+  else{
+    alert('first Number is less than second')
+  }
+
+} else if(opreation == '/'){
+  if(FirstNumber > SecondNumber){
+    alert(FirstNumber/SecondNumber);
+  }else{
+    alert('first Number is less than second')
+  }
+} 
+
+
+
