@@ -159,9 +159,19 @@ if(n1 > n2){
 🎖Write a JavaScript conditional statement to find the sign (+, -) of product of three numbers. Take those three numbers from user using `prompt`. Display an alert box with the specified sign.
 */
 // [Your code goes here]
+let numOne = +prompt('Enter first number');
+let numTwo = +prompt('Enter second number');
+let numThree = +prompt('Enter third number');
 
+let product = numOne*numTwo*numThree;
+if(product > 0){
+  alert('final value is positive');
+}else{
+  alert('final value is negative')
+}
 /* Calculator
  🎖Make a simple calculator with these functions. Using prompt, type conversion, if else statement. Use prompt to take the input from user i.e two numbers and an operation (Add, Sub, Mul, Div).
+  
 
   ⛑ Rule
     * [ ] While substracting and dividing keep in mind the number one should be greater then number two. If not show alert saying `Number Two is larger then Number one`.
