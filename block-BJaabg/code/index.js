@@ -15,4 +15,21 @@ var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
 
+while(bank_balance > PHONE_PRICE){
+    bank_balance -= PHONE_PRICE;
+    amount += PHONE_PRICE;
+    if(SPENDING_THRESHOLD >= amount){
+      amount += ACCESSORY_PRICE;
+    }
+  
+  }
+  
+  amount += amount * TAX_RATE;
+  amount = amount.toFixed(2);
+  
+
+bank_balance => amount ? alert('you can afford this') : alert('you can not afford this') 
 // ⛑ Answer of the above will `$334.76`.
+
+
+ 
